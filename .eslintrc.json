@@ -1,0 +1,90 @@
+{
+	"root": true,
+	"ignorePatterns": ["projects/**/*"],
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint"],
+	"overrides": [
+		{
+			"files": ["*.ts"],
+			"parserOptions": {
+				"project": ["tsconfig.json"],
+				"createDefaultProgram": true
+			},
+			"rules": {
+				"@typescript-eslint/array-type": [
+					"error",
+					{
+						"default": "array"
+					}
+				],
+				"@typescript-eslint/consistent-type-definitions": "error",
+				"@typescript-eslint/dot-notation": "off",
+				"@typescript-eslint/explicit-member-accessibility": [
+					"warn",
+					{
+						"accessibility": "explicit",
+						"overrides": {
+							"accessors": "explicit",
+							"constructors": "off"
+						}
+					}
+				],
+				"@typescript-eslint/member-ordering": ["off"],
+				"@typescript-eslint/naming-convention": ["warn", { "selector": "variableLike", "format": ["camelCase", "UPPER_CASE"] }],
+				"@typescript-eslint/no-empty-interface": ["off"],
+				"@typescript-eslint/no-namespace": "off",
+				"@typescript-eslint/no-inferrable-types": [
+					"off",
+					{
+						"ignoreParameters": true
+					}
+				],
+				"@typescript-eslint/no-var-requires": "error",
+				"@typescript-eslint/quotes": [
+					"error",
+					"double",
+					{
+						"allowTemplateLiterals": true
+					}
+				],
+				"@typescript-eslint/explicit-function-return-type": [
+					"warn",
+					{
+						"allowExpressions": true
+					}
+				],
+				"@typescript-eslint/typedef": [
+					"warn",
+					{
+						"arrayDestructuring": true,
+						"arrowParameter": false,
+						"memberVariableDeclaration": true,
+						"objectDestructuring": false,
+						"parameter": true,
+						"propertyDeclaration": true,
+						"variableDeclaration": false,
+						"variableDeclarationIgnoreFunction": false
+					}
+				],
+				"arrow-body-style": ["off"],
+				"arrow-parens": ["off", "always"],
+				"brace-style": ["error", "1tbs"],
+				"id-blacklist": "error",
+				"import/order": "off",
+				"max-classes-per-file": "off",
+				"max-len": [
+					"warn",
+					{
+						"code": 140,
+						"ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
+						"ignoreUrls": true,
+						"ignoreComments": true,
+						"ignoreStrings": true,
+						"ignoreTemplateLiterals": true
+					}
+				],
+				"no-underscore-dangle": ["off"]
+			}
+		}
+	]
+}

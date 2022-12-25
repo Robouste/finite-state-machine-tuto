@@ -1,9 +1,22 @@
 export namespace Keys {
-	export enum Images {}
+	export enum Images {
+		Background = "background",
+	}
 
-	export enum Sprites {}
+	export enum Sprites {
+		Hero = "hero",
+	}
 
-	export enum Animations {}
+	export enum Animations {
+		WalkDown = "walk-down",
+		WalkRight = "walk-right",
+		WalkUp = "walk-up",
+		WalkLeft = "walk-left",
+		SwingDown = "swing-down",
+		SwingRight = "swing-right",
+		SwingUp = "swing-up",
+		SwingLeft = "swing-left",
+	}
 
 	export enum Audio {}
 
@@ -29,5 +42,12 @@ export namespace Keys {
 
 	export enum MouseEvents {
 		PointerDown = "pointerdown",
+	}
+
+	export enum States {
+		Idle = "idle",
+		Moving = "moving",
+		Swinging = "swinging",
+		Dashing = "dashing",
 	}
 }

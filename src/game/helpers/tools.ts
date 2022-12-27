@@ -1,7 +1,7 @@
 import { Keys } from "./keys";
 import { Direction } from "./types";
 
-export class Utils {
+export class Tools {
 	public static get swingMapping(): Map<Direction, Keys.Animations> {
 		return new Map<Direction, Keys.Animations>()
 			.set("down", Keys.Animations.SwingDown)
@@ -16,5 +16,9 @@ export class Utils {
 			.set("up", Keys.Animations.WalkUp)
 			.set("right", Keys.Animations.WalkRight)
 			.set("left", Keys.Animations.WalkLeft);
+	}
+
+	public static getTilePosition(tileNumber: number): number {
+		return tileNumber * 16;
 	}
 }

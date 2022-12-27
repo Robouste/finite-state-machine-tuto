@@ -1,6 +1,8 @@
 export namespace Keys {
 	export enum Images {
 		Background = "background",
+		Overworld = "Overworld",
+		Objects = "Objects",
 	}
 
 	export enum Sprites {
@@ -25,7 +27,16 @@ export namespace Keys {
 		Game = "game",
 	}
 
-	export enum Tiles {}
+	export enum TileLayers {
+		Ground = "Ground",
+		Impassables = "Impassables",
+		Walkable = "Walkable",
+	}
+
+	export enum Maps {
+		Home = "home",
+		Start = "start",
+	}
 
 	export enum Atlases {}
 

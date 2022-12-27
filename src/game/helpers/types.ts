@@ -8,8 +8,10 @@ export declare type GameText = Phaser.GameObjects.Text;
 export declare type GameTextStyle = Phaser.Types.GameObjects.Text.TextStyle;
 export declare type Gameconfig = Phaser.Types.Core.GameConfig;
 export declare type Image = Phaser.GameObjects.Image;
+export declare type ImageWithDynamicBody = Phaser.Types.Physics.Arcade.ImageWithDynamicBody;
 export declare type InputPointer = Phaser.Input.Pointer;
 export declare type KeyboardKey = Phaser.Input.Keyboard.Key;
+export declare type Rectangle = Phaser.GameObjects.Rectangle;
 export declare type SoundManager =
 	| Phaser.Sound.NoAudioSoundManager
 	| Phaser.Sound.HTML5AudioSoundManager

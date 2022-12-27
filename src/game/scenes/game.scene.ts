@@ -1,10 +1,17 @@
 import { Hero } from "../classes/hero.class";
-import { DashingState, IdleState, MovingState, State, StateMachine, SwingingState } from "../classes/state-machine.class";
 import { Keys } from "../helpers/keys";
-import { CursorKeys } from "../helpers/types";
+import { Tools } from "../helpers/tools";
+import { CursorKeys, ImageWithDynamicBody } from "../helpers/types";
+import { AttackingState } from "../states/attacking.state";
+import { DashingState } from "../states/dashing.state";
+import { IdleState } from "../states/idle.state";
+import { MovingState } from "../states/moving.state";
+import { State } from "../states/state";
+import { StateMachine } from "../states/state-machine.class";
 
 export class GameScene extends Phaser.Scene {
 	public keys!: CursorKeys;
+	public swordHitBox!: ImageWithDynamicBody;
 	private hero!: Hero;
 	private stateMachine!: StateMachine;
 
@@ -17,73 +24,41 @@ export class GameScene extends Phaser.Scene {
 	}
 
 	public create(): void {
-		this.add.image(200, 200, Keys.Images.Background);
+		const map = this.make.tilemap({ key: Keys.Maps.Start });
+		const overworldTileset = map.addTilesetImage(Keys.Images.Overworld);
+		const objectsTileset = map.addTilesetImage(Keys.Images.Objects);
+		const groundLayer = map.createLayer(Keys.TileLayers.Ground, [overworldTileset, objectsTileset], 0, 0);
+		const impassableLayer = map.createLayer(Keys.TileLayers.Impassables, [overworldTileset, objectsTileset]);
+		const walkableLayer = map.createLayer(Keys.TileLayers.Walkable, [overworldTileset, objectsTileset]);
 
-		this.hero = this.physics.add.sprite(200, 150, Keys.Sprites.Hero, 0) as Hero;
+		this.hero = this.physics.add.sprite(Tools.getTilePosition(20), Tools.getTilePosition(7), Keys.Sprites.Hero, 0) as Hero;
+		this.hero.setCollideWorldBounds(true);
+		this.hero.setSize(16, 10).setOffset(9, 16);
+		this.physics.add.collider(this.hero, impassableLayer);
 		this.hero.direction = "down";
+
+		this.swordHitBox = this.add.rectangle(0, 0, 10, 10, 0xffffff, 0) as unknown as ImageWithDynamicBody;
+		this.physics.add.existing(this.swordHitBox);
+		this.swordHitBox.body.enable = false;
+		this.physics.world.remove(this.swordHitBox.body);
+
+		impassableLayer.setCollisionByExclusion([-1], true);
 
 		this.stateMachine = new StateMachine(
 			Keys.States.Idle,
 			new Map<Keys.States, State>()
 				.set(Keys.States.Idle, new IdleState())
 				.set(Keys.States.Moving, new MovingState())
-				.set(Keys.States.Swinging, new SwingingState())
+				.set(Keys.States.Swinging, new AttackingState())
 				.set(Keys.States.Dashing, new DashingState()),
 			this,
 			this.hero
 		);
-	}
 
-	public update(): void {
-		this.createInputs();
 		this.createAnims();
 	}
 
-	private createInputs(): void {
-		// let moving = false;
-
-		// this.hero.setVelocity(0);
-
-		// // If we're swinging a sword, wait for the animation to finish
-		// if (!this.hero.swinging) {
-		// 	// Swinging a sword overrides movement
-		// 	if (this.keys.space.isDown) {
-		// 		this.hero.swinging = true;
-		// 		this.hero.anims.play(this.swingMapping.get(this.hero.direction)!, true);
-
-		// 		this.hero.once("animationcomplete", () => {
-		// 			this.hero.anims.play(this.walkMapping.get(this.hero.direction)!, true);
-		// 			this.hero.swinging = false;
-		// 		});
-		// 	} else {
-		// 		// Set new velocity based on input
-		// 		if (this.keys.up.isDown) {
-		// 			this.hero.setVelocityY(-100);
-		// 			this.hero.direction = "up";
-		// 			moving = true;
-		// 		} else if (this.keys.down.isDown) {
-		// 			this.hero.setVelocityY(100);
-		// 			this.hero.direction = "down";
-		// 			moving = true;
-		// 		}
-		// 		if (this.keys.left.isDown) {
-		// 			this.hero.setVelocityX(-100);
-		// 			this.hero.direction = "left";
-		// 			moving = true;
-		// 		} else if (this.keys.right.isDown) {
-		// 			this.hero.setVelocityX(100);
-		// 			this.hero.direction = "right";
-		// 			moving = true;
-		// 		}
-
-		// 		if (!moving) {
-		// 			this.hero.anims.stop();
-		// 		} else {
-		// 			this.hero.anims.play(this.walkMapping.get(this.hero.direction)!, true);
-		// 		}
-		// 	}
-		// }
-
+	public update(): void {
 		this.stateMachine.step();
 	}
 

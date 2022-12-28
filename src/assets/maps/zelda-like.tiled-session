@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "home.json",
+    "activeFile": "start.json",
     "expandedProjectPaths": [
         "."
     ],
@@ -19,8 +19,8 @@
             "scale": 2,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 212.75,
-                "y": 127.5
+                "x": 8,
+                "y": 7.75
             }
         },
         "home.json#NPC": {
@@ -34,12 +34,21 @@
             "scaleInEditor": 1
         },
         "start.json": {
-            "scale": 2,
+            "scale": 1.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 201.75,
-                "y": 178
+                "x": -25.66666666666667,
+                "y": 62.66666666666666
             }
+        },
+        "start.json#NPC": {
+            "scaleInDock": 1.5
+        },
+        "start.json#Objects": {
+            "scaleInDock": 1.5
+        },
+        "start.json#Overworld": {
+            "scaleInDock": 1.5
         }
     },
     "last.imagePath": "R:/Dev/Phaser/finite-state-machine-tuto/src/assets/maps",
@@ -50,13 +59,14 @@
     "map.tileWidth": 16,
     "map.width": 24,
     "openFiles": [
-        "home.json"
+        "home.json",
+        "start.json"
     ],
     "project": "zelda-like.tiled-project",
     "recentFiles": [
         "home.json",
-        "Overworld.json",
-        "start.json"
+        "start.json",
+        "Overworld.json"
     ],
     "tileset.embedInMap": true,
     "tileset.lastUsedFormat": "json",

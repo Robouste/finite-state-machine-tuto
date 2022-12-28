@@ -7,6 +7,7 @@ export namespace Keys {
 
 	export enum Sprites {
 		Hero = "hero",
+		NPC = "npc",
 	}
 
 	export enum Animations {
@@ -60,5 +61,6 @@ export namespace Keys {
 		Moving = "moving",
 		Swinging = "swinging",
 		Dashing = "dashing",
+		BeingHit = "beinghit",
 	}
 }

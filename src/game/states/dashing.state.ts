@@ -4,7 +4,7 @@ import { Tools } from "../helpers/tools";
 import { GameScene } from "../scenes/game.scene";
 import { State } from "./state";
 
-export class DashingState extends State {
+export class DashingState extends State<Hero> {
 	public enter(scene: GameScene, hero: Hero): void {
 		hero.setVelocity(0);
 		hero.play(Tools.swingMapping.get(hero.direction)!);
@@ -29,5 +29,5 @@ export class DashingState extends State {
 		});
 	}
 
-	public execute(scene: GameScene, hero: Hero): void {}
+	public update(scene: GameScene, hero: Hero): void {}
 }

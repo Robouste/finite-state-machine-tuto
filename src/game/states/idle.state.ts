@@ -4,14 +4,22 @@ import { Tools } from "../helpers/tools";
 import { GameScene } from "../scenes/game.scene";
 import { State } from "./state";
 
-export class IdleState extends State {
+export class IdleState extends State<Hero> {
+	constructor(private canMove: boolean = true) {
+		super();
+	}
+
 	public enter(scene: GameScene, hero: Hero): void {
 		hero.setVelocity(0);
 		hero.anims.play(Tools.walkMapping.get(hero.direction)!);
 		hero.anims.stop();
 	}
 
-	public execute(scene: GameScene, hero: Hero): void {
+	public update(scene: GameScene, hero: Hero): void {
+		if (!this.canMove) {
+			return;
+		}
+
 		const { left, right, up, down, space, shift } = scene.keys;
 
 		// Transition to swing if pressing space

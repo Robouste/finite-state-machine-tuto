@@ -4,10 +4,10 @@ import { Tools } from "../helpers/tools";
 import { GameScene } from "../scenes/game.scene";
 import { State } from "./state";
 
-export class MovingState extends State {
+export class MovingState extends State<Hero> {
 	public enter(scene: GameScene, hero: Hero): void {}
 
-	public execute(scene: GameScene, hero: Hero): void {
+	public update(scene: GameScene, hero: Hero): void {
 		const { left, right, up, down, space, shift } = scene.keys;
 		// Transition to swing if pressing space
 		if (space.isDown) {

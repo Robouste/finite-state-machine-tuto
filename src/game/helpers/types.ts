@@ -1,3 +1,5 @@
+export declare type Animation = Phaser.Animations.Animation;
+export declare type AnimationFrame = Phaser.Animations.AnimationFrame;
 export declare type ArcadeGroup = Phaser.Physics.Arcade.Group;
 export declare type ArcadeSprite = Phaser.Physics.Arcade.Sprite;
 export declare type BaseSound = Phaser.Sound.BaseSound;

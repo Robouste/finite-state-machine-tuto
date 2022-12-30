@@ -8,6 +8,11 @@ export class MovingState extends State<Hero> {
 	public enter(scene: GameScene, hero: Hero): void {}
 
 	public update(scene: GameScene, hero: Hero): void {
+		if (!hero.canMove) {
+			this.stateMachine.transition(Keys.States.Idle);
+			return;
+		}
+
 		const { left, right, up, down, space, shift } = scene.keys;
 		// Transition to swing if pressing space
 		if (space.isDown) {
@@ -27,24 +32,24 @@ export class MovingState extends State<Hero> {
 			return;
 		}
 
-		hero.setVelocity(0);
+		hero.sprite.setVelocity(0);
 
 		if (up.isDown) {
-			hero.setVelocityY(-100);
+			hero.sprite.setVelocityY(-100);
 			hero.direction = "up";
 		} else if (down.isDown) {
-			hero.setVelocityY(100);
+			hero.sprite.setVelocityY(100);
 			hero.direction = "down";
 		}
 
 		if (left.isDown) {
-			hero.setVelocityX(-100);
+			hero.sprite.setVelocityX(-100);
 			hero.direction = "left";
 		} else if (right.isDown) {
-			hero.setVelocityX(100);
+			hero.sprite.setVelocityX(100);
 			hero.direction = "right";
 		}
 
-		hero.anims.play(Tools.walkMapping.get(hero.direction)!, true);
+		hero.sprite.anims.play(Tools.walkMapping.get(hero.direction)!, true);
 	}
 }

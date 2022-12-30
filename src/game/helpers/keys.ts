@@ -30,13 +30,15 @@ export namespace Keys {
 
 	export enum TileLayers {
 		Ground = "Ground",
-		Impassables = "Impassables",
+		Obsticles = "Obsticles",
+		Obsticles2 = "Obsticles2",
 		Walkable = "Walkable",
 	}
 
 	export enum Maps {
 		Home = "home",
 		Start = "start",
+		Start2 = "start-2",
 	}
 
 	export enum Atlases {}

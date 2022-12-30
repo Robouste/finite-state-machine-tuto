@@ -1,97 +1,772 @@
-{ "compressionlevel":-1,
- "height":24,
- "infinite":false,
- "layers":[
-        {
-         "compression":"",
-         "data":"AQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAA5QIAAOUCAAABAAAAAQAAALEEAACyBAAAswQAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAALEEAACyBAAAswQAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAALEEAACyBAAAswQAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACJBAAAigQAACoFAACyBAAAKQUAAIoEAACKBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACxBAAAsgQAALIEAACyBAAAsgQAALIEAACyBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACxBAAAsgQAALIEAACyBAAAsgQAALIEAACyBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACxBAAAsgQAALIEAAABBQAA2gQAANoEAADaBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACJBAAAigQAAIoEAACKBAAAigQAAIoEAAAqBQAAsgQAALIEAACzBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACxBAAAsgQAALIEAACyBAAAsgQAALIEAACyBAAAsgQAALIEAACzBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACxBAAAsgQAALIEAACyBAAAsgQAALIEAACyBAAAsgQAALIEAACzBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACxBAAAsgQAALIEAAABBQAA2gQAANoEAADaBAAA2gQAANoEAADbBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACxBAAAsgQAALIEAACzBAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAACxBAAAsgQAALIEAACzBAAAAQAAAAEAAAABAAAAAQAAAHkAAAB6AAAAegAAAHsAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAIkEAAAqBQAAsgQAALIEAACzBAAAAQAAAAEAAAABAAAAeQAAABoBAACiAAAAogAAABkBAAB7AAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAALEEAACyBAAAsgQAALIEAACzBAAAAQAAAAEAAAABAAAAoQAAAKIAAACiAAAAogAAAKIAAACjAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAALEEAACyBAAAsgQAAAEFAAABAAAAAQAAAAEAAAABAAAAoQAAAKIAAACiAAAAogAAAKIAAACjAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAALEEAACyBAAAsgQAALMEAAABAAAAAQAAAAEAAAABAAAAyQAAAPIAAACiAAAAogAAAPEAAADLAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAALEEAACyBAAAsgQAALMEAAABAAAAAQAAAAEAAAABAAAAAQAAAMkAAADKAAAAygAAAMsAAAABAAAA",
-         "encoding":"base64",
-         "height":24,
-         "id":1,
-         "name":"Ground",
-         "opacity":1,
-         "type":"tilelayer",
-         "visible":true,
-         "width":24,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "compression":"",
-         "data":"qwIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAK0CAACsAgAA1QIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAAAAAAHAEAABwBAAAcAQAAHAEAABwBAAAcAQAAHAEAABwBAAAAAAAAAAAAANAAAAAAAAAAAAAAAP4AAAD\/AAAALwAAADAAAAAxAAAAMgAAADMAAADVAgAA1QIAAAAAAAAAAAAAHAEAABwBAAAcAQAAHAEAABwBAAAcAQAAHAEAABwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAACYBAAAnAQAAVwAAAFgAAABZAAAAWgAAAFsAAADVAgAA1QIAAAAAAAAAAAAAAAAAAAAAAAAcAQAAHAEAABwBAAAcAQAAHAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfwAAAIAAAACBAAAAggAAAIMAAADVAgAA1QIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAEAABwBAAAcAQAAAAAAAAAAAAC1BQAAtgUAAAAAAAAAAAAAAAAAAAAAAAAAAAAApwAAAKgAAACpAAAAqgAAAKsAAADVAgAA1QIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAEAABwBAAAcAQAAAAAAAAAAAADWBQAA1wUAAAAAAAAAAAAAOwMAADwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAAAAAAAAAAABwBAAAcAQAAHAEAABwBAAAcAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAAAAAAAAAAABwBAAAcAQAAHAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAAAAAAHAEAABwBAAAcAQAAAAAAAAAAAAAAAAAAAAAAAAAAAADjAAAAAAAAAAAAAAAAAAAA5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADRAgAA1QIAAAAAAAAAAAAAHAEAABwBAAAcAQAAAAAAAAAAAADQAAAAAAAAAAAAAAALAQAAAAAAAN0BAAAAAAAADAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1QIAAAAAAAAAAAAAHAEAABwBAAAcAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAQAAAAAAAAUCAAAAAAAADAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1QIAAAAAAAAAAAAAHAEAABwBAAAcAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACpAgAA1QIAAAAAAAAAAAAAHAEAABwBAAAcAQAAHAEAABwBAAAcAQAAHAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAAAAAAHAEAABwBAAAcAQAAHAEAABwBAAAcAQAAHAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAAAAAAAAAAABwBAAAcAQAAHAEAABwBAAAcAQAAHAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAADQAAAAAAAAABwBAAAcAQAAHAEAABwBAAAcAQAAHAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAKAgAACwIAAAsCAAALAgAACwIAAAsCAAAMAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAAAyAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA1QIAAAAAAABaAgAAWwIAAFsCAABbAgAADAIAAAAAAAA0AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD3BgAA+AYAAAAAAADVAgAA1QIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWQIAADMCAABZAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYBwAAGQcAAAAAAADVAgAA1QIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVAgAA0wIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAPoCAAAAAAAAAAAAAPkCAACtAgAArQIAAK0CAACtAgAArQIAAK0CAACtAgAArQIAAK0CAADUAgAA",
-         "encoding":"base64",
-         "height":24,
-         "id":2,
-         "name":"Impassables",
-         "opacity":1,
-         "type":"tilelayer",
-         "visible":true,
-         "width":24,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "compression":"",
-         "data":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADzAAAA9AAAAPQAAAD0AAAA9AAAAPQAAAD0AAAA9AAAAPQAAAD1AAAAAAAAAAAAAAAAAAAAAAAAANYAAADXAAAABwAAAAgAAAAJAAAACgAAAAsAAAAAAAAAAAAAAAAAAAAbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbAQAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAdAQAAQQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDAQAARAEAAGwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGsBAABFAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAQAAAAAAAEMBAABsAQAAAAAAAH0AAAAAAAAAawEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8wAAAPQAAACUAQAAAAAAAAAAAAAAAAAAHQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAQAAGwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYwMAAGQDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADzAAAAlAEAAAAAAAAAAAAAAAAAAGsBAABEAQAARQEAAAAAAAC7AAAAAAAAAAAAAAAAAAAAvAAAAAAAAAAAAAAAQQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEBAAAbAQAAAAAAAAAAAAAAAAAAawEAAEUBAAAAAAAAAAAAAAAAAAAAAAAAtAEAALUBAAC2AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbAQAAAAAAAAUAAAAAAAAAHQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3AEAAAAAAADeAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbAQAAAAAAAAAAAAAAAAAAHQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAIAAAAAAAAGAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbAQAAAAAAAHwAAAAAAAAAkwEAAPQAAAD0AAAA9AAAAPUAAAAzAQAAAAAAAAAAAAAAAAAANAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQQEAAAAAAAAAAAAAAAAAAAAAAAAbAQAAAAAAAAAAAAAFAAAAAAAAAHwAAAAAAAAAAAAAAB0BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDAQAAbAEAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAB0BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEBAAAAAAAAQwEAAEQBAABEAQAARAEAAEQBAABEAQAARAEAAEUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-         "encoding":"base64",
-         "height":24,
-         "id":3,
-         "name":"Walkable",
-         "opacity":1,
-         "type":"tilelayer",
-         "visible":true,
-         "width":24,
-         "x":0,
-         "y":0
-        }],
- "nextlayerid":5,
- "nextobjectid":1,
- "orientation":"orthogonal",
- "renderorder":"right-down",
- "tiledversion":"1.9.2",
- "tileheight":16,
- "tilesets":[
-        {
-         "columns":40,
-         "firstgid":1,
-         "image":"Overworld.png",
-         "imageheight":576,
-         "imagewidth":640,
-         "margin":0,
-         "name":"Overworld",
-         "spacing":0,
-         "tilecount":1440,
-         "tileheight":16,
-         "tilewidth":16
-        }, 
-        {
-         "columns":33,
-         "firstgid":1441,
-         "image":"objects.png",
-         "imageheight":320,
-         "imagewidth":528,
-         "margin":0,
-         "name":"Objects",
-         "spacing":0,
-         "tilecount":660,
-         "tileheight":16,
-         "tilewidth":16
-        }, 
-        {
-         "columns":4,
-         "firstgid":2101,
-         "image":"NPC_test.png",
-         "imageheight":128,
-         "imagewidth":64,
-         "margin":0,
-         "name":"NPC",
-         "spacing":0,
-         "tilecount":32,
-         "tileheight":16,
-         "tilewidth":16
-        }],
- "tilewidth":16,
- "type":"map",
- "version":"1.9",
- "width":24
+{
+	"compressionlevel": -1,
+	"height": 24,
+	"infinite": true,
+	"layers": [
+		{
+			"chunks": [
+				{
+					"data": [
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 741, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1161, 1162, 1162, 1162, 1162, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1201, 1202, 1202, 1202, 1202, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1201, 1202, 1202, 1202, 1202
+					],
+					"height": 16,
+					"width": 16,
+					"x": 0,
+					"y": 0
+				},
+				{
+					"data": [
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 741, 1, 1, 1201, 1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1201, 1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1201, 1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1161, 1162, 1322, 1202, 1321, 1162, 1162, 1162, 1162, 1162, 1162, 1162, 1162, 1163, 1, 1, 1201, 1202, 1202, 1202,
+						1202, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1321, 1162, 1, 1201, 1202, 1202, 1202, 1202, 1202, 1202, 1202,
+						1202, 1202, 1202, 1202, 1202, 1202, 1202, 1, 1201, 1202, 1202, 1281, 1242, 1242, 1242, 1242, 1242, 1242, 1242, 1282,
+						1202, 1202, 1202, 1162, 1322, 1202, 1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1241, 1242, 1282, 1202, 1202, 1202, 1202, 1202,
+						1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1241, 1242, 1202, 1202, 1202, 1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+					],
+					"height": 16,
+					"width": 16,
+					"x": 16,
+					"y": 0
+				},
+				{
+					"data": [
+						405, 1, 1, 283, 1, 1, 285, 1, 1, 1, 1, 1, 1, 1, 1, 1, 405, 1, 1, 283, 1, 1, 285, 1, 1, 1, 1, 1, 1, 1, 1, 1, 405, 1,
+						1, 283, 1, 1, 285, 1, 1, 1, 1, 1, 1, 1, 1, 1, 445, 446, 446, 690, 1, 1, 691, 446, 446, 446, 446, 446, 446, 446, 446,
+						446, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 283, 1, 1, 1, 1, 285, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 283, 1, 1, 1, 1, 285, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 283, 1, 1, 1, 1, 285, 1, 1, 1, 1, 1, 1, 1, 1, 1163, 1, 323, 364, 1, 1, 1, 403, 245, 1, 1,
+						1, 1, 1, 1, 1, 1321, 1162, 1162, 283, 1, 1, 1, 1, 285, 1162, 1162, 1162, 1162, 1162, 1162, 1162, 1202, 1202, 1202,
+						1202, 284, 284, 284, 284, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 284, 284, 284,
+						284, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1202, 1242, 1242, 1242, 283, 1, 1, 1, 1, 403, 245, 1242, 1242, 1242,
+						1242, 1242, 1242, 1, 1, 1, 323, 364, 1, 1, 1, 1, 403, 245, 1, 1, 1, 1, 1
+					],
+					"height": 16,
+					"width": 16,
+					"x": 32,
+					"y": 0
+				},
+				{
+					"data": [
+						1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1201, 1202, 1202, 1281, 1242, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1201, 1202, 1202,
+						1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1201, 1202, 1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1161, 1322, 1202,
+						1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1201, 1202, 1202, 1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1201,
+						1202, 1202, 1281, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1201, 1202, 1202, 1203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1201, 1202, 1202, 1203, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 0,
+					"y": 16
+				},
+				{
+					"data": [
+						1242, 1242, 1242, 1242, 1243, 1, 1, 1, 1, 1, 1175, 1176, 1176, 1176, 1176, 1176, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1215,
+						1216, 1216, 1216, 1216, 1216, 1, 1, 1, 121, 122, 122, 123, 1, 1, 1, 1215, 1216, 1216, 1216, 1216, 1216, 1, 1, 121,
+						282, 162, 162, 281, 123, 1, 1, 1255, 1256, 1296, 1216, 1216, 1216, 1, 1, 161, 162, 162, 162, 162, 163, 1, 1, 1, 1,
+						1255, 1256, 1256, 1256, 1, 1, 161, 162, 162, 162, 162, 163, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 201, 242, 162, 162, 241,
+						203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 201, 202, 202, 203, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 16,
+					"y": 16
+				},
+				{
+					"data": [
+						1177, 1, 1, 1, 323, 364, 1, 1, 1, 1, 403, 245, 1, 1, 1, 1, 1335, 1176, 1176, 1177, 1, 323, 364, 1, 1, 1, 1, 403,
+						244, 244, 244, 244, 1216, 1216, 1216, 1217, 1, 1, 323, 364, 1, 1, 1, 1, 1, 1, 1, 1, 1216, 1216, 1216, 1217, 1, 1, 1,
+						323, 364, 1, 1, 1, 1, 1, 1, 1, 1256, 1256, 1256, 1257, 1, 1, 1, 1, 323, 364, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 323, 324, 324, 364, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 323, 324, 324, 324, 1, 1, 1, 1, 1, 1, 1, 1,
+						1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 32,
+					"y": 16
+				}
+			],
+			"height": 32,
+			"id": 1,
+			"name": "Ground",
+			"opacity": 1,
+			"startx": 0,
+			"starty": 0,
+			"type": "tilelayer",
+			"visible": true,
+			"width": 48,
+			"x": 0,
+			"y": 0
+		},
+		{
+			"chunks": [
+				{
+					"data": [
+						683, 685, 685, 685, 685, 685, 685, 685, 685, 685, 685, 685, 685, 685, 685, 685, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 725, 0, 0, 284, 284, 284, 284, 284, 284, 284, 284, 0, 0, 208, 0, 0, 725, 0, 0, 284, 284, 284, 284,
+						284, 284, 284, 284, 0, 0, 0, 0, 0, 725, 0, 0, 0, 0, 284, 284, 284, 284, 284, 0, 0, 0, 0, 0, 0, 725, 0, 0, 0, 0, 0,
+						284, 284, 284, 0, 0, 1461, 1462, 0, 0, 0, 725, 0, 0, 0, 0, 0, 284, 284, 284, 0, 0, 1494, 1495, 0, 0, 827, 725, 0, 0,
+						0, 284, 284, 284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 725, 0, 0, 0, 284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 725, 0, 0,
+						284, 284, 284, 0, 0, 0, 0, 0, 227, 0, 0, 0, 228, 725, 0, 0, 284, 284, 284, 0, 0, 208, 0, 0, 267, 0, 477, 0, 268,
+						725, 0, 0, 284, 284, 284, 0, 0, 0, 0, 0, 267, 0, 517, 0, 268, 725, 0, 0, 284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 725, 0, 0, 284, 284, 284, 284, 284, 284, 284, 0, 0, 0, 0, 0, 0, 725, 0, 0, 284, 284, 284, 284, 284, 284, 284, 0,
+						0, 0, 0, 0, 0, 725, 0, 0, 0, 284, 284, 284, 284, 284, 284, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 0,
+					"y": 0
+				},
+				{
+					"data": [
+						685, 685, 685, 685, 685, 685, 685, 684, 683, 685, 685, 685, 685, 685, 685, 684, 0, 0, 0, 0, 0, 0, 0, 725, 725, 0, 0,
+						0, 0, 0, 0, 725, 254, 255, 47, 48, 49, 50, 51, 725, 725, 0, 0, 0, 0, 0, 0, 725, 294, 295, 87, 88, 89, 90, 91, 725,
+						725, 0, 0, 0, 0, 0, 0, 725, 0, 0, 127, 128, 129, 130, 131, 725, 725, 0, 0, 0, 0, 0, 0, 725, 0, 0, 167, 168, 169,
+						170, 171, 725, 725, 0, 0, 0, 0, 0, 0, 725, 828, 0, 0, 0, 0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 721, 0, 0, 115, 0, 0,
+						0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 721,
+						721, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 681, 681, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 16,
+					"y": 0
+				},
+				{
+					"data": [
+						0, 0, 0, 0, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 259, 259, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 525, 486, 486, 730, 299,
+						299, 731, 486, 486, 486, 486, 486, 486, 486, 486, 486, 525, 526, 526, 770, 299, 299, 771, 526, 526, 526, 526, 526,
+						526, 526, 526, 526, 565, 566, 729, 652, 339, 339, 653, 769, 566, 566, 566, 566, 566, 566, 566, 566, 0, 0, 0, 378,
+						379, 379, 380, 0, 0, 0, 0, 0, 0, 0, 0, 681, 0, 0, 0, 284, 284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 725, 0, 0, 0, 284,
+						284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 725, 0, 0, 0, 0, 284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 725, 0, 0, 0, 0, 284,
+						284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 721, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 284, 284, 284, 284, 0, 208, 0, 0, 0, 0, 0, 681, 0, 0, 0, 0, 0, 284, 284, 284, 284,
+						0, 0, 0, 0, 0, 0, 725
+					],
+					"height": 16,
+					"width": 16,
+					"x": 32,
+					"y": 0
+				},
+				{
+					"data": [
+						725, 0, 208, 0, 284, 284, 284, 284, 284, 284, 0, 0, 0, 0, 0, 0, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						725, 0, 522, 523, 523, 523, 523, 523, 524, 0, 0, 0, 0, 0, 0, 0, 725, 0, 562, 0, 0, 0, 0, 0, 564, 0, 0, 0, 0, 0, 0,
+						0, 725, 0, 602, 603, 603, 603, 524, 0, 564, 0, 0, 0, 0, 0, 0, 0, 725, 0, 0, 0, 0, 0, 601, 563, 601, 0, 0, 0, 0, 0,
+						0, 0, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 723, 685, 685, 685, 685, 685, 685, 685, 685, 685, 762, 0, 0,
+						761, 685, 685, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 0,
+					"y": 16
+				},
+				{
+					"data": [
+						0, 0, 0, 0, 0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1783, 1784,
+						0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1816, 1817, 0, 725, 725, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						725, 725, 0, 0, 0, 0, 0, 0, 0, 685, 685, 685, 685, 685, 685, 685, 724, 723, 685, 685, 685, 685, 685, 685, 685, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 16,
+					"y": 16
+				},
+				{
+					"data": [
+						0, 0, 0, 0, 0, 0, 284, 284, 284, 284, 0, 0, 0, 0, 0, 725, 0, 0, 0, 0, 0, 0, 0, 284, 284, 284, 284, 0, 0, 0, 0, 721,
+						0, 0, 0, 0, 0, 0, 0, 0, 284, 284, 284, 284, 284, 284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 284, 284, 284, 284, 284,
+						284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 284, 284, 284, 284, 284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 284,
+						284, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 681, 685, 685, 685, 685, 685, 685, 685, 685, 685, 685, 685,
+						685, 685, 685, 685, 724, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 32,
+					"y": 16
+				}
+			],
+			"height": 32,
+			"id": 2,
+			"name": "Obsticles",
+			"opacity": 1,
+			"startx": 0,
+			"starty": 0,
+			"type": "tilelayer",
+			"visible": true,
+			"width": 48,
+			"x": 0,
+			"y": 0
+		},
+		{
+			"chunks": [
+				{
+					"data": [
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 243, 244, 244, 244, 244, 244, 244, 244, 244, 245, 0, 0, 0, 0,
+						0, 0, 283, 0, 0, 0, 0, 0, 0, 0, 0, 285, 0, 0, 0, 0, 0, 0, 283, 0, 0, 0, 0, 5, 0, 0, 0, 285, 321, 0, 0, 0, 0, 0, 323,
+						324, 364, 0, 0, 124, 0, 0, 363, 325, 0, 0, 0, 0, 0, 0, 321, 0, 323, 364, 0, 0, 0, 363, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						243, 244, 404, 0, 0, 0, 285, 0, 0, 0, 0, 0, 321, 0, 0, 321, 283, 0, 0, 0, 0, 0, 285, 0, 0, 0, 0, 0, 867, 0, 0, 243,
+						404, 0, 124, 0, 363, 324, 325, 0, 187, 0, 0, 0, 188, 0, 321, 283, 0, 0, 0, 363, 325, 0, 0, 0, 0, 436, 437, 438, 0,
+						0, 0, 283, 0, 5, 0, 285, 0, 0, 0, 0, 0, 476, 0, 478, 0, 0, 0, 283, 0, 0, 0, 285, 0, 0, 0, 0, 0, 516, 0, 518, 0, 0,
+						0, 283, 0, 124, 0, 403, 244, 244, 244, 245, 307, 0, 0, 0, 308, 0, 0, 283, 0, 0, 0, 0, 0, 0, 0, 285, 0, 0, 0, 0, 0,
+						0, 0, 283, 0, 0, 5, 0, 0, 0, 0, 285, 0, 0, 0, 0, 0, 0, 0, 323, 364, 0, 0, 124, 5, 0, 0, 285, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 0,
+					"y": 0
+				},
+				{
+					"data": [
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 214, 215, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 868, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 321, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 321, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 16,
+					"y": 0
+				},
+				{
+					"data": [
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 249, 250, 250, 250, 250, 251, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 291, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 329, 330, 330, 330, 330, 331, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 32,
+					"y": 0
+				},
+				{
+					"data": [
+						0, 0, 0, 283, 0, 0, 0, 0, 0, 0, 285, 0, 0, 0, 0, 0, 0, 321, 0, 323, 324, 324, 324, 324, 324, 324, 325, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 321, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 321, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 321, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 0,
+					"y": 16
+				},
+				{
+					"data": [
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 321, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 321, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 16,
+					"y": 16
+				},
+				{
+					"data": [
+						0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 124, 0, 0, 0, 5, 0, 0, 321, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+					],
+					"height": 16,
+					"width": 16,
+					"x": 32,
+					"y": 16
+				}
+			],
+			"height": 32,
+			"id": 3,
+			"name": "Walkable",
+			"opacity": 1,
+			"startx": 0,
+			"starty": 0,
+			"type": "tilelayer",
+			"visible": true,
+			"width": 48,
+			"x": 0,
+			"y": 0
+		},
+		{
+			"draworder": "topdown",
+			"id": 5,
+			"name": "Objects",
+			"objects": [
+				{
+					"class": "Spawn",
+					"height": 0,
+					"id": 1,
+					"name": "Player",
+					"point": true,
+					"properties": [
+						{
+							"name": "type",
+							"type": "string",
+							"value": "Spawn"
+						}
+					],
+					"rotation": 0,
+					"visible": true,
+					"width": 0,
+					"x": 295.333333333333,
+					"y": 180.666666666667
+				},
+				{
+					"class": "Room",
+					"height": 384,
+					"id": 3,
+					"name": "Start1",
+					"properties": [
+						{
+							"name": "type",
+							"type": "string",
+							"value": "Room"
+						}
+					],
+					"rotation": 0,
+					"visible": true,
+					"width": 383.333333333333,
+					"x": 0.666666666666667,
+					"y": 0.666666666666667
+				},
+				{
+					"class": "Room",
+					"height": 384.666666666667,
+					"id": 4,
+					"name": "Start2",
+					"properties": [
+						{
+							"name": "type",
+							"type": "string",
+							"value": "Room"
+						}
+					],
+					"rotation": 0,
+					"visible": true,
+					"width": 382.666666666667,
+					"x": 384.666666666667,
+					"y": -0.666666666666667
+				}
+			],
+			"opacity": 1,
+			"type": "objectgroup",
+			"visible": true,
+			"x": 0,
+			"y": 0
+		}
+	],
+	"nextlayerid": 6,
+	"nextobjectid": 5,
+	"orientation": "orthogonal",
+	"renderorder": "right-down",
+	"tiledversion": "1.9.2",
+	"tileheight": 16,
+	"tilesets": [
+		{
+			"columns": 40,
+			"firstgid": 1,
+			"image": "Overworld.png",
+			"imageheight": 576,
+			"imagewidth": 640,
+			"margin": 0,
+			"name": "Overworld",
+			"spacing": 0,
+			"tilecount": 1440,
+			"tileheight": 16,
+			"tiles": [
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 16
+						},
+						{
+							"duration": 100,
+							"tileid": 18
+						},
+						{
+							"duration": 100,
+							"tileid": 20
+						},
+						{
+							"duration": 100,
+							"tileid": 96
+						},
+						{
+							"duration": 100,
+							"tileid": 98
+						},
+						{
+							"duration": 100,
+							"tileid": 100
+						}
+					],
+					"id": 16
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 17
+						},
+						{
+							"duration": 100,
+							"tileid": 19
+						},
+						{
+							"duration": 100,
+							"tileid": 21
+						},
+						{
+							"duration": 100,
+							"tileid": 97
+						},
+						{
+							"duration": 100,
+							"tileid": 99
+						},
+						{
+							"duration": 100,
+							"tileid": 101
+						}
+					],
+					"id": 17
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 40
+						},
+						{
+							"duration": 100,
+							"tileid": 41
+						},
+						{
+							"duration": 100,
+							"tileid": 42
+						},
+						{
+							"duration": 100,
+							"tileid": 43
+						},
+						{
+							"duration": 100,
+							"tileid": 80
+						},
+						{
+							"duration": 100,
+							"tileid": 81
+						},
+						{
+							"duration": 100,
+							"tileid": 82
+						},
+						{
+							"duration": 100,
+							"tileid": 83
+						}
+					],
+					"id": 40
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 56
+						},
+						{
+							"duration": 100,
+							"tileid": 58
+						},
+						{
+							"duration": 100,
+							"tileid": 60
+						},
+						{
+							"duration": 100,
+							"tileid": 136
+						},
+						{
+							"duration": 100,
+							"tileid": 138
+						},
+						{
+							"duration": 100,
+							"tileid": 140
+						}
+					],
+					"id": 56
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 57
+						},
+						{
+							"duration": 100,
+							"tileid": 59
+						},
+						{
+							"duration": 100,
+							"tileid": 61
+						},
+						{
+							"duration": 100,
+							"tileid": 137
+						},
+						{
+							"duration": 100,
+							"tileid": 139
+						},
+						{
+							"duration": 100,
+							"tileid": 141
+						}
+					],
+					"id": 57
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 123
+						},
+						{
+							"duration": 100,
+							"tileid": 124
+						},
+						{
+							"duration": 100,
+							"tileid": 125
+						},
+						{
+							"duration": 100,
+							"tileid": 163
+						},
+						{
+							"duration": 100,
+							"tileid": 164
+						},
+						{
+							"duration": 100,
+							"tileid": 165
+						}
+					],
+					"id": 123
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 258
+						},
+						{
+							"duration": 100,
+							"tileid": 259
+						},
+						{
+							"duration": 100,
+							"tileid": 260
+						}
+					],
+					"id": 258
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 298
+						},
+						{
+							"duration": 100,
+							"tileid": 299
+						},
+						{
+							"duration": 100,
+							"tileid": 300
+						}
+					],
+					"id": 298
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 338
+						},
+						{
+							"duration": 100,
+							"tileid": 339
+						},
+						{
+							"duration": 100,
+							"tileid": 340
+						}
+					],
+					"id": 338
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 377
+						},
+						{
+							"duration": 100,
+							"tileid": 417
+						},
+						{
+							"duration": 100,
+							"tileid": 458
+						}
+					],
+					"id": 377
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 378
+						},
+						{
+							"duration": 100,
+							"tileid": 418
+						},
+						{
+							"duration": 100,
+							"tileid": 459
+						}
+					],
+					"id": 378
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 379
+						},
+						{
+							"duration": 100,
+							"tileid": 419
+						},
+						{
+							"duration": 100,
+							"tileid": 460
+						}
+					],
+					"id": 379
+				},
+				{
+					"animation": [
+						{
+							"duration": 100,
+							"tileid": 123
+						},
+						{
+							"duration": 100,
+							"tileid": 124
+						},
+						{
+							"duration": 100,
+							"tileid": 125
+						},
+						{
+							"duration": 100,
+							"tileid": 163
+						},
+						{
+							"duration": 100,
+							"tileid": 164
+						},
+						{
+							"duration": 100,
+							"tileid": 165
+						}
+					],
+					"id": 952
+				}
+			],
+			"tilewidth": 16
+		},
+		{
+			"columns": 33,
+			"firstgid": 1441,
+			"image": "objects.png",
+			"imageheight": 320,
+			"imagewidth": 528,
+			"margin": 0,
+			"name": "Objects",
+			"spacing": 0,
+			"tilecount": 660,
+			"tileheight": 16,
+			"tilewidth": 16
+		},
+		{
+			"columns": 4,
+			"firstgid": 2101,
+			"image": "NPC_test.png",
+			"imageheight": 128,
+			"imagewidth": 64,
+			"margin": 0,
+			"name": "NPC",
+			"spacing": 0,
+			"tilecount": 32,
+			"tileheight": 16,
+			"tilewidth": 16
+		}
+	],
+	"tilewidth": 16,
+	"type": "map",
+	"version": "1.9",
+	"width": 48
 }

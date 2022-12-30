@@ -1,10 +1,14 @@
+import * as AnimatedTiles from "../../assets/plugins/AnimatedTiles";
 import { Hero } from "../classes/hero.class";
 import { Keys } from "../helpers/keys";
+import { Systems } from "../helpers/systems.class";
 import { Tools } from "../helpers/tools";
-import { CursorKeys, ImageWithDynamicBody, SpriteWithDynamicBody } from "../helpers/types";
+import { ArcadeGroup, CursorKeys, ImageWithDynamicBody, SpriteWithDynamicBody, TilemapLayer } from "../helpers/types";
+import { ObjectLayer } from "../interfaces/object-layer.interface";
 import { AttackingState } from "../states/attacking.state";
 import { BeingHitState } from "../states/being-hit.state";
 import { DashingState } from "../states/dashing.state";
+import { EnnemyIdleState } from "../states/ennemy-idle.state";
 import { IdleState } from "../states/idle.state";
 import { MovingState } from "../states/moving.state";
 import { State } from "../states/state";
@@ -14,9 +18,17 @@ export class GameScene extends Phaser.Scene {
 	public keys!: CursorKeys;
 	public swordHitBox!: ImageWithDynamicBody;
 	public ennemy!: SpriteWithDynamicBody;
+	public rooms: ObjectLayer[] = [];
+
 	private hero!: Hero;
 	private heroStateMachine!: StateMachine<Hero>;
 	private ennemyStateMachine!: StateMachine<SpriteWithDynamicBody>;
+	private impassableLayer!: TilemapLayer;
+	private travelingRectangles!: ArcadeGroup;
+
+	private get systems(): Systems {
+		return this.sys as Systems;
+	}
 
 	constructor() {
 		super(Keys.Scenes.Game);
@@ -26,30 +38,122 @@ export class GameScene extends Phaser.Scene {
 		this.keys = this.input.keyboard.createCursorKeys();
 	}
 
+	public preload(): void {
+		this.load.scenePlugin("animatedTiles", AnimatedTiles, "animatedTiles", "animatedTile");
+	}
+
 	public create(): void {
-		const map = this.make.tilemap({ key: Keys.Maps.Start });
+		this.createMapsAndLayers(Keys.Maps.Start);
+
+		this.ennemy = this.physics.add.sprite(Tools.getTilePosition(22), Tools.getTilePosition(7), Keys.Sprites.NPC, 0);
+		this.add.text(this.ennemy.x - 14, this.ennemy.y - 16, "Max", {
+			fontSize: "16px",
+			color: "#000",
+			stroke: "#fff",
+			strokeThickness: 1,
+		});
+
+		this.createSwordAttack();
+
+		this.createStateMachines();
+
+		this.physics.add.overlap(
+			this.swordHitBox,
+			this.ennemy,
+			() => this.ennemyStateMachine.transition(Keys.States.BeingHit),
+			undefined,
+			this
+		);
+
+		this.physics.add.collider(this.hero.sprite, this.impassableLayer);
+		this.impassableLayer.setCollisionByExclusion([-1], true);
+		this.physics.add.collider(this.hero.sprite, this.travelingRectangles, () => this.travelToStart2(), undefined, this);
+
+		this.createAnims();
+	}
+
+	public update(time: number): void {
+		this.hero.updateRoom();
+		this.heroStateMachine.step();
+
+		if (this.hero.roomChange) {
+			this.cameras.main.fadeOut(250, 0, 0, 0, (camera, progress) => {
+				this.hero.canMove = false;
+
+				if (progress === 1) {
+					const currentRoom = this.rooms[this.hero.currentRoom];
+					this.cameras.main
+						.setBounds(currentRoom.x, currentRoom.y, currentRoom.width, currentRoom.height, true)
+						.fadeIn(500, 0, 0, 0, (camera, progress) => {
+							if (progress === 1) {
+								this.hero.canMove = true;
+								// this.roomStart(this.hero.currentRoom);
+							}
+						});
+				}
+			});
+		}
+	}
+
+	private createMapsAndLayers(key: Keys.Maps): void {
+		const map = this.make.tilemap({ key });
 		const overworldTileset = map.addTilesetImage(Keys.Images.Overworld);
 		const objectsTileset = map.addTilesetImage(Keys.Images.Objects);
 
-		const groundLayer = map.createLayer(Keys.TileLayers.Ground, [overworldTileset, objectsTileset], 0, 0);
-		const impassableLayer = map.createLayer(Keys.TileLayers.Impassables, [overworldTileset, objectsTileset]);
+		map.createLayer(Keys.TileLayers.Ground, [overworldTileset, objectsTileset], 0, 0);
+		this.impassableLayer = map.createLayer(Keys.TileLayers.Obsticles, [overworldTileset, objectsTileset]);
 		const walkableLayer = map.createLayer(Keys.TileLayers.Walkable, [overworldTileset, objectsTileset]);
 
-		this.hero = this.physics.add.sprite(Tools.getTilePosition(20), Tools.getTilePosition(7), Keys.Sprites.Hero, 0) as Hero;
-		this.hero.setCollideWorldBounds(true);
-		this.hero.setSize(16, 10).setOffset(9, 16);
-		this.hero.direction = "down";
+		this.physics.world.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
 
-		this.ennemy = this.physics.add.sprite(Tools.getTilePosition(22), Tools.getTilePosition(7), Keys.Sprites.NPC, 0);
+		map.findObject("Objects", (stupid) => {
+			const object = stupid as unknown as ObjectLayer;
 
-		this.physics.add.collider(this.hero, impassableLayer);
-		impassableLayer.setCollisionByExclusion([-1], true);
+			object.properties.forEach((prop) => {
+				switch (prop.value) {
+					case "Room":
+						this.rooms.push(object);
+						object.properties.push({
+							name: "visited",
+							value: false,
+							type: "bool",
+						});
+						break;
+				}
+			});
+		});
 
+		const playerObject = map.getObjectLayer("Objects").objects.find((obj) => obj.name === "Player");
+
+		if (playerObject) {
+			this.createHero(playerObject.x!, playerObject.y!);
+		}
+
+		const currentRoom = this.rooms[this.hero.currentRoom];
+
+		this.cameras.main
+			// .setZoom(1.5)
+			.setBounds(currentRoom.x, currentRoom.y, currentRoom.width, currentRoom.height, true)
+			.startFollow(this.hero.sprite)
+			.fadeIn(2000, 0, 0, 0);
+
+		// this.travelingRectangles.getChildren().forEach((child) => (child as Rectangle).setOrigin(0));
+
+		this.systems.animatedTiles?.init(map);
+	}
+
+	private createHero(x: number, y: number): void {
+		this.hero = new Hero(this, this.physics.add.sprite(x, y, Keys.Sprites.Hero, 0));
+	}
+
+	private createSwordAttack(): void {
 		this.swordHitBox = this.add.rectangle(0, 0, 10, 10, 0xffffff, 0) as unknown as ImageWithDynamicBody;
 		this.physics.add.existing(this.swordHitBox);
 		this.swordHitBox.body.enable = false;
 		this.physics.world.remove(this.swordHitBox.body);
+	}
 
+	private createStateMachines(): void {
 		this.heroStateMachine = new StateMachine(
 			Keys.States.Idle,
 			new Map<Keys.States, State<Hero>>()
@@ -64,26 +168,20 @@ export class GameScene extends Phaser.Scene {
 		this.ennemyStateMachine = new StateMachine(
 			Keys.States.Idle,
 			new Map<Keys.States, State<SpriteWithDynamicBody>>()
-				.set(Keys.States.Idle, new IdleState(false))
+				.set(Keys.States.Idle, new EnnemyIdleState())
 				.set(Keys.States.BeingHit, new BeingHitState()),
 			this,
 			this.ennemy
 		);
-
-		this.physics.add.overlap(
-			this.swordHitBox,
-			this.ennemy,
-			() => this.ennemyStateMachine.transition(Keys.States.BeingHit),
-			undefined,
-			this
-		);
-
-		this.createAnims();
 	}
 
-	public update(): void {
-		this.heroStateMachine.step();
+	private travelToStart2(): void {
+		this.cameras.main.setPosition(-384, 0);
 	}
+
+	// private roomStart(roomNumber: number): void {
+	// 	if (roomNumber == )
+	// }
 
 	private createAnims(): void {
 		this.anims.create({

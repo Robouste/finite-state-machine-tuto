@@ -23,10 +23,9 @@ export class Hero {
 		this.sprite.body.setSize(16, 10).setOffset(9, 16);
 
 		this.keys = scene.input.keyboard.addKeys("W,S,A,D,UP,LEFT,RIGHT,DOWN,SPACE") as Keys;
-		this.updateRoom();
 	}
 
-	public updateRoom(): void {
+	public checkForRoomChange(): void {
 		let roomNumber: number = 0;
 
 		for (let room in this.scene.rooms) {

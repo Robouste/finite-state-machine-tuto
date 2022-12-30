@@ -3,7 +3,7 @@ import { Hero } from "../classes/hero.class";
 import { Keys } from "../helpers/keys";
 import { Systems } from "../helpers/systems.class";
 import { Tools } from "../helpers/tools";
-import { ArcadeGroup, CursorKeys, ImageWithDynamicBody, SpriteWithDynamicBody, TilemapLayer } from "../helpers/types";
+import { CursorKeys, ImageWithDynamicBody, SpriteWithDynamicBody, TilemapLayer } from "../helpers/types";
 import { ObjectLayer } from "../interfaces/object-layer.interface";
 import { AttackingState } from "../states/attacking.state";
 import { BeingHitState } from "../states/being-hit.state";
@@ -24,7 +24,6 @@ export class GameScene extends Phaser.Scene {
 	private heroStateMachine!: StateMachine<Hero>;
 	private ennemyStateMachine!: StateMachine<SpriteWithDynamicBody>;
 	private impassableLayer!: TilemapLayer;
-	private travelingRectangles!: ArcadeGroup;
 
 	private get systems(): Systems {
 		return this.sys as Systems;
@@ -67,13 +66,12 @@ export class GameScene extends Phaser.Scene {
 
 		this.physics.add.collider(this.hero.sprite, this.impassableLayer);
 		this.impassableLayer.setCollisionByExclusion([-1], true);
-		this.physics.add.collider(this.hero.sprite, this.travelingRectangles, () => this.travelToStart2(), undefined, this);
 
 		this.createAnims();
 	}
 
-	public update(time: number): void {
-		this.hero.updateRoom();
+	public update(time: number, delta: number): void {
+		this.hero.checkForRoomChange();
 		this.heroStateMachine.step();
 
 		if (this.hero.roomChange) {
@@ -87,7 +85,6 @@ export class GameScene extends Phaser.Scene {
 						.fadeIn(500, 0, 0, 0, (camera, progress) => {
 							if (progress === 1) {
 								this.hero.canMove = true;
-								// this.roomStart(this.hero.currentRoom);
 							}
 						});
 				}
@@ -132,12 +129,9 @@ export class GameScene extends Phaser.Scene {
 		const currentRoom = this.rooms[this.hero.currentRoom];
 
 		this.cameras.main
-			// .setZoom(1.5)
 			.setBounds(currentRoom.x, currentRoom.y, currentRoom.width, currentRoom.height, true)
 			.startFollow(this.hero.sprite)
 			.fadeIn(2000, 0, 0, 0);
-
-		// this.travelingRectangles.getChildren().forEach((child) => (child as Rectangle).setOrigin(0));
 
 		this.systems.animatedTiles?.init(map);
 	}
@@ -173,10 +167,6 @@ export class GameScene extends Phaser.Scene {
 			this,
 			this.ennemy
 		);
-	}
-
-	private travelToStart2(): void {
-		this.cameras.main.setPosition(-384, 0);
 	}
 
 	// private roomStart(roomNumber: number): void {

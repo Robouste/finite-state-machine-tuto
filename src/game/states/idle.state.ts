@@ -10,9 +10,9 @@ export class IdleState extends State<Hero> {
 	}
 
 	public enter(scene: GameScene, hero: Hero): void {
-		hero.sprite.setVelocity(0);
-		hero.sprite.anims.play(Tools.walkMapping.get(hero.direction)!);
-		hero.sprite.anims.stop();
+		hero.setVelocity(0);
+		hero.anims.play(Tools.walkMapping.get(hero.direction)!);
+		hero.anims.stop();
 	}
 
 	public update(scene: GameScene, hero: Hero): void {

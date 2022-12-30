@@ -65,15 +65,14 @@ export class GameScene extends Phaser.Scene {
 			this
 		);
 
-		this.physics.add.collider(this.hero.sprite, this.impassableLayer);
-		this.physics.add.overlap(this.hero.sprite, this.ladders, () => (this.hero.onLadder = true), undefined, this);
+		this.physics.add.collider(this.hero, this.impassableLayer);
+		this.physics.add.overlap(this.hero, this.ladders, () => (this.hero.onLadder = true), undefined, this);
 		this.impassableLayer.setCollisionByExclusion([-1], true);
 
 		this.createAnims();
 	}
 
 	public update(time: number, delta: number): void {
-		this.hero.checkForRoomChange();
 		this.heroStateMachine.step();
 
 		if (this.hero.roomChange) {
@@ -99,10 +98,12 @@ export class GameScene extends Phaser.Scene {
 		const overworldTileset = map.addTilesetImage(Keys.Images.Overworld);
 		const objectsTileset = map.addTilesetImage(Keys.Images.Objects);
 		const castleTileset = map.addTilesetImage(Keys.Images.Castle);
+		const npcTileset = map.addTilesetImage(Keys.Sprites.NPC);
 
-		const tilesets = [overworldTileset, objectsTileset, castleTileset];
+		const tilesets = [overworldTileset, objectsTileset, castleTileset, npcTileset];
 
 		map.createLayer(Keys.TileLayers.Ground, tilesets, 0, 0);
+		map.createLayer(Keys.TileLayers.NPC, tilesets);
 		this.impassableLayer = map.createLayer(Keys.TileLayers.Obsticles, tilesets);
 		const walkableLayer = map.createLayer(Keys.TileLayers.Walkable, tilesets);
 
@@ -127,6 +128,9 @@ export class GameScene extends Phaser.Scene {
 						this.ladders.add(
 							new Phaser.GameObjects.Rectangle(this, object.x, object.y, object.width, object.height).setOrigin(0)
 						);
+						break;
+					case "Interaction":
+						break;
 				}
 			});
 		});
@@ -140,15 +144,16 @@ export class GameScene extends Phaser.Scene {
 		const currentRoom = this.rooms[this.hero.currentRoom];
 
 		this.cameras.main
+			.setZoom(1.2)
 			.setBounds(currentRoom.x, currentRoom.y, currentRoom.width, currentRoom.height, true)
-			.startFollow(this.hero.sprite)
+			.startFollow(this.hero)
 			.fadeIn(2000, 0, 0, 0);
 
 		this.systems.animatedTiles?.init(map);
 	}
 
 	private createHero(x: number, y: number): void {
-		this.hero = new Hero(this, this.physics.add.sprite(x, y, Keys.Sprites.Hero, 0));
+		this.hero = new Hero(this, x, y, Keys.Sprites.Hero, 0);
 	}
 
 	private createSwordAttack(): void {

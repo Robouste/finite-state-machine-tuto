@@ -1,5 +1,6 @@
-export declare type ObjectLayerPropertyValue = "Spawn" | "Room" | "Ladder" | any;
+export declare type ObjectLayerPropertyValue = "Spawn" | "Room" | "Ladder" | "Chest" | "Interaction" | any;
 export declare type ObjectLayerPropertyType = "bool" | "color" | "float" | "file" | "int" | "object" | "string";
+export declare type InteractionType = "OpenText" | "Dialog";
 
 export interface ObjectLayerProperty {
 	name: string;

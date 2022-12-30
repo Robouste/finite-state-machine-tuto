@@ -6,20 +6,20 @@ import { State } from "./state";
 
 export class DashingState extends State<Hero> {
 	public enter(scene: GameScene, hero: Hero): void {
-		hero.sprite.setVelocity(0);
-		hero.sprite.play(Tools.swingMapping.get(hero.direction)!);
+		hero.setVelocity(0);
+		hero.play(Tools.swingMapping.get(hero.direction)!);
 		switch (hero.direction) {
 			case "up":
-				hero.sprite.setVelocityY(-300);
+				hero.setVelocityY(-300);
 				break;
 			case "down":
-				hero.sprite.setVelocityY(300);
+				hero.setVelocityY(300);
 				break;
 			case "left":
-				hero.sprite.setVelocityX(-300);
+				hero.setVelocityX(-300);
 				break;
 			case "right":
-				hero.sprite.setVelocityX(300);
+				hero.setVelocityX(300);
 				break;
 		}
 

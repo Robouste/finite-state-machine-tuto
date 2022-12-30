@@ -10,28 +10,28 @@ export class AttackingState extends State<Hero> {
 		const animationKey = Tools.swingMapping.get(hero.direction)!;
 		const swordHitBox = scene.swordHitBox;
 
-		hero.sprite.setVelocity(0);
-		hero.sprite.anims.play(animationKey);
+		hero.setVelocity(0);
+		hero.anims.play(animationKey);
 
 		const startHit = (anim: Animation, frame: AnimationFrame): void => {
-			hero.sprite.off(Phaser.Animations.Events.ANIMATION_UPDATE, startHit);
+			hero.off(Phaser.Animations.Events.ANIMATION_UPDATE, startHit);
 
 			switch (hero.direction) {
 				case "right":
-					swordHitBox.x = hero.sprite.x + hero.sprite.width * 0.25;
-					swordHitBox.y = hero.sprite.y + hero.sprite.height * 0.2;
+					swordHitBox.x = hero.x + hero.width * 0.25;
+					swordHitBox.y = hero.y + hero.height * 0.2;
 					break;
 				case "left":
-					swordHitBox.x = hero.sprite.x - hero.sprite.width * 0.25;
-					swordHitBox.y = hero.sprite.y + hero.sprite.height * 0.2;
+					swordHitBox.x = hero.x - hero.width * 0.25;
+					swordHitBox.y = hero.y + hero.height * 0.2;
 					break;
 				case "up":
-					swordHitBox.x = hero.sprite.x;
-					swordHitBox.y = hero.sprite.y - hero.sprite.height * 0.25;
+					swordHitBox.x = hero.x;
+					swordHitBox.y = hero.y - hero.height * 0.25;
 					break;
 				case "down":
-					swordHitBox.x = hero.sprite.x;
-					swordHitBox.y = hero.sprite.y + hero.sprite.height * 0.35;
+					swordHitBox.x = hero.x;
+					swordHitBox.y = hero.y + hero.height * 0.35;
 					break;
 			}
 
@@ -39,9 +39,9 @@ export class AttackingState extends State<Hero> {
 			scene.physics.world.add(swordHitBox.body);
 		};
 
-		hero.sprite.on(Phaser.Animations.Events.ANIMATION_UPDATE, startHit);
+		hero.on(Phaser.Animations.Events.ANIMATION_UPDATE, startHit);
 
-		hero.sprite.once(Phaser.Animations.Events.ANIMATION_COMPLETE, () => {
+		hero.once(Phaser.Animations.Events.ANIMATION_COMPLETE, () => {
 			this.stateMachine.transition(Keys.States.Idle);
 			swordHitBox.body.enable = false;
 			scene.physics.world.remove(swordHitBox.body);

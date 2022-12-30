@@ -35,24 +35,24 @@ export class MovingState extends State<Hero> {
 			return;
 		}
 
-		hero.sprite.setVelocity(0);
+		hero.setVelocity(0);
 
 		if (up.isDown) {
-			hero.sprite.setVelocityY(-velocity);
+			hero.setVelocityY(-velocity);
 			hero.direction = "up";
 		} else if (down.isDown) {
-			hero.sprite.setVelocityY(velocity);
+			hero.setVelocityY(velocity);
 			hero.direction = "down";
 		}
 
 		if (left.isDown) {
-			hero.sprite.setVelocityX(-velocity);
+			hero.setVelocityX(-velocity);
 			hero.direction = "left";
 		} else if (right.isDown) {
-			hero.sprite.setVelocityX(velocity);
+			hero.setVelocityX(velocity);
 			hero.direction = "right";
 		}
 
-		hero.sprite.anims.play(Tools.walkMapping.get(hero.direction)!, true);
+		hero.anims.play(Tools.walkMapping.get(hero.direction)!, true);
 	}
 }

@@ -8,7 +8,7 @@ export namespace Keys {
 
 	export enum Sprites {
 		Hero = "hero",
-		NPC = "npc",
+		NPC = "NPC",
 	}
 
 	export enum Animations {
@@ -34,6 +34,7 @@ export namespace Keys {
 		Obsticles = "Obsticles",
 		Obsticles2 = "Obsticles2",
 		Walkable = "Walkable",
+		NPC = "NPC",
 	}
 
 	export enum Maps {

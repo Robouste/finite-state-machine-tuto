@@ -1,29 +1,31 @@
-import { Direction, KeyboardKey, SpriteWithDynamicBody } from "../helpers/types";
+import { Direction, KeyboardKey, Texture } from "../helpers/types";
 import { GameScene } from "../scenes/game.scene";
 
 export interface Keys {
 	[key: string]: KeyboardKey;
 }
 
-export class Hero {
-	public direction: Direction;
+export class Hero extends Phaser.Physics.Arcade.Sprite {
+	public direction: Direction = "down";
 	public currentRoom: number = 0;
 	public previousRoom: number | null = null;
 	public roomChange: boolean = false;
 	public canMove: boolean = true;
 	public onLadder: boolean = false;
-	public keys: Keys;
 
-	constructor(public scene: GameScene, public sprite: SpriteWithDynamicBody) {
-		this.direction = "down";
+	constructor(public scene: GameScene, x: number, y: number, texture: string | Texture, frame?: number) {
+		super(scene, x, y, texture, frame);
 
-		this.scene.physics.world.enable(this.sprite);
-		this.scene.add.existing(this.sprite);
+		scene.physics.world.enable(this);
+		scene.add.existing(this);
 
-		this.sprite.body.setCollideWorldBounds(true);
-		this.sprite.body.setSize(16, 10).setOffset(9, 16);
+		this.setCollideWorldBounds(true);
+		this.setSize(16, 10).setOffset(9, 16);
+	}
 
-		this.keys = scene.input.keyboard.addKeys("W,S,A,D,UP,LEFT,RIGHT,DOWN,SPACE") as Keys;
+	protected preUpdate(time: number, delta: number): void {
+		super.preUpdate(time, delta);
+		this.checkForRoomChange();
 	}
 
 	public checkForRoomChange(): void {
@@ -36,7 +38,7 @@ export class Hero {
 			const roomBottom = this.scene.rooms[room].y + this.scene.rooms[room].height;
 
 			// Player is within the boundaries of the room
-			if (this.sprite.x > roomLeft && this.sprite.x < roomRight && this.sprite.y > roomTop && this.sprite.y < roomBottom) {
+			if (this.x > roomLeft && this.x < roomRight && this.y > roomTop && this.y < roomBottom) {
 				roomNumber = +room;
 
 				// Set this room as visited by the player

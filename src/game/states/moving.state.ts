@@ -13,6 +13,9 @@ export class MovingState extends State<Hero> {
 			return;
 		}
 
+		const velocity = hero.onLadder ? 25 : 100;
+		hero.onLadder = false;
+
 		const { left, right, up, down, space, shift } = scene.keys;
 		// Transition to swing if pressing space
 		if (space.isDown) {
@@ -35,18 +38,18 @@ export class MovingState extends State<Hero> {
 		hero.sprite.setVelocity(0);
 
 		if (up.isDown) {
-			hero.sprite.setVelocityY(-100);
+			hero.sprite.setVelocityY(-velocity);
 			hero.direction = "up";
 		} else if (down.isDown) {
-			hero.sprite.setVelocityY(100);
+			hero.sprite.setVelocityY(velocity);
 			hero.direction = "down";
 		}
 
 		if (left.isDown) {
-			hero.sprite.setVelocityX(-100);
+			hero.sprite.setVelocityX(-velocity);
 			hero.direction = "left";
 		} else if (right.isDown) {
-			hero.sprite.setVelocityX(100);
+			hero.sprite.setVelocityX(velocity);
 			hero.direction = "right";
 		}
 

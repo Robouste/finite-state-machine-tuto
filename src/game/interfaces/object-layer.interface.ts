@@ -1,10 +1,10 @@
-export declare type ObjectLayerValue = "Spawn" | "Room" | any;
-export declare type ObjectLayerType = "bool" | "color" | "float" | "file" | "int" | "object" | "string";
+export declare type ObjectLayerPropertyValue = "Spawn" | "Room" | "Ladder" | any;
+export declare type ObjectLayerPropertyType = "bool" | "color" | "float" | "file" | "int" | "object" | "string";
 
 export interface ObjectLayerProperty {
 	name: string;
-	type: ObjectLayerType;
-	value: ObjectLayerValue;
+	type: ObjectLayerPropertyType;
+	value: ObjectLayerPropertyValue;
 }
 
 export interface ObjectLayer {

@@ -3,7 +3,7 @@ import { Hero } from "../classes/hero.class";
 import { Keys } from "../helpers/keys";
 import { Systems } from "../helpers/systems.class";
 import { Tools } from "../helpers/tools";
-import { CursorKeys, ImageWithDynamicBody, SpriteWithDynamicBody, TilemapLayer } from "../helpers/types";
+import { ArcadeGroup, CursorKeys, ImageWithDynamicBody, SpriteWithDynamicBody, TilemapLayer } from "../helpers/types";
 import { ObjectLayer } from "../interfaces/object-layer.interface";
 import { AttackingState } from "../states/attacking.state";
 import { BeingHitState } from "../states/being-hit.state";
@@ -24,6 +24,7 @@ export class GameScene extends Phaser.Scene {
 	private heroStateMachine!: StateMachine<Hero>;
 	private ennemyStateMachine!: StateMachine<SpriteWithDynamicBody>;
 	private impassableLayer!: TilemapLayer;
+	private ladders!: ArcadeGroup;
 
 	private get systems(): Systems {
 		return this.sys as Systems;
@@ -65,6 +66,7 @@ export class GameScene extends Phaser.Scene {
 		);
 
 		this.physics.add.collider(this.hero.sprite, this.impassableLayer);
+		this.physics.add.overlap(this.hero.sprite, this.ladders, () => (this.hero.onLadder = true), undefined, this);
 		this.impassableLayer.setCollisionByExclusion([-1], true);
 
 		this.createAnims();
@@ -96,12 +98,17 @@ export class GameScene extends Phaser.Scene {
 		const map = this.make.tilemap({ key });
 		const overworldTileset = map.addTilesetImage(Keys.Images.Overworld);
 		const objectsTileset = map.addTilesetImage(Keys.Images.Objects);
+		const castleTileset = map.addTilesetImage(Keys.Images.Castle);
 
-		map.createLayer(Keys.TileLayers.Ground, [overworldTileset, objectsTileset], 0, 0);
-		this.impassableLayer = map.createLayer(Keys.TileLayers.Obsticles, [overworldTileset, objectsTileset]);
-		const walkableLayer = map.createLayer(Keys.TileLayers.Walkable, [overworldTileset, objectsTileset]);
+		const tilesets = [overworldTileset, objectsTileset, castleTileset];
+
+		map.createLayer(Keys.TileLayers.Ground, tilesets, 0, 0);
+		this.impassableLayer = map.createLayer(Keys.TileLayers.Obsticles, tilesets);
+		const walkableLayer = map.createLayer(Keys.TileLayers.Walkable, tilesets);
 
 		this.physics.world.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
+
+		this.ladders = this.physics.add.group();
 
 		map.findObject("Objects", (stupid) => {
 			const object = stupid as unknown as ObjectLayer;
@@ -116,6 +123,10 @@ export class GameScene extends Phaser.Scene {
 							type: "bool",
 						});
 						break;
+					case "Ladder":
+						this.ladders.add(
+							new Phaser.GameObjects.Rectangle(this, object.x, object.y, object.width, object.height).setOrigin(0)
+						);
 				}
 			});
 		});
@@ -168,10 +179,6 @@ export class GameScene extends Phaser.Scene {
 			this.ennemy
 		);
 	}
-
-	// private roomStart(roomNumber: number): void {
-	// 	if (roomNumber == )
-	// }
 
 	private createAnims(): void {
 		this.anims.create({

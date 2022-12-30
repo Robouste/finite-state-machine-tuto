@@ -502,6 +502,12 @@
                  "height":50.6666666666667,
                  "id":5,
                  "name":"Ladder",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"Ladder"
+                        }],
                  "rotation":0,
                  "visible":true,
                  "width":16,

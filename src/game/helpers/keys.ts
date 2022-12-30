@@ -3,6 +3,7 @@ export namespace Keys {
 		Background = "background",
 		Overworld = "Overworld",
 		Objects = "Objects",
+		Castle = "Castle",
 	}
 
 	export enum Sprites {

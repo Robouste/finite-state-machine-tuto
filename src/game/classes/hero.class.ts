@@ -11,6 +11,7 @@ export class Hero {
 	public previousRoom: number | null = null;
 	public roomChange: boolean = false;
 	public canMove: boolean = true;
+	public onLadder: boolean = false;
 	public keys: Keys;
 
 	constructor(public scene: GameScene, public sprite: SpriteWithDynamicBody) {
